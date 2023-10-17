@@ -84,30 +84,65 @@
 // Console.WriteLine(Find(array, x));              
 //.........................................................................................
 
-void fillArray(int[] array) 
-{
-    int Length = array.Length;
-    for(int i = 0; i < Length; i++)
-    {
-        array[i] = new Random().Next(0, 150);
-    }
-}
+// void fillArray(int[] array) 
+// {
+//     int Length = array.Length;
+//     for(int i = 0; i < Length; i++)
+//     {
+//         array[i] = new Random().Next(0, 150);
+//     }
+// }
 
-int EmNumbers(int[] array)
-{
-    int x = 0;
-    for (int i = 0; i < array.Length; i++)
-    {   
-        if(array[i] >= 10 && array[i] <= 99)
-        x += 1;
-    }
-        return x;
+// int EmNumbers(int[] array)
+// {
+//     int x = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {   
+//         if(array[i] >= 10 && array[i] <= 99)
+//         x += 1;
+//     }
+//         return x;
     
-}
+// }
 
-Console.Write("Insert the Length of an array: ");
-int n = Convert.ToInt32(Console.ReadLine());   
-int[] array = new int[n];                  
-fillArray(array);                         
-Console.WriteLine($"[{String.Join(", ", array)}]");  
-Console.Write($"There are {EmNumbers(array)} numbers between 10 and 99");
+// Console.Write("Insert the Length of an array: ");
+// int n = Convert.ToInt32(Console.ReadLine());   
+// int[] array = new int[n];                  
+// fillArray(array);                         
+// Console.WriteLine($"[{String.Join(", ", array)}]");  
+// Console.Write($"There are {EmNumbers(array)} numbers between 10 and 99");
+//.................................................................................................
+
+// Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и 
+// последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+// [1 2 3 4 5] -> 5 8 9
+// [6 7 3 6] -> 36 21
+
+// void fillArray(int[] array) 
+// {
+//     int Length = array.Length;
+//     for(int i = 0; i < Length; i++)
+//     {
+//         array[i] = new Random().Next(0, 15);
+//     }
+// }
+
+// void EmNumbers(int[] array)
+// {
+//     for(int i = 0; i < array.Length / 2 + array.Length % 2 ; i++)  // вычисляем 
+//         Console.Write($"{array[i] * array[array.Length - 1 - i]} ");
+//     // array[0]   array[array.Length - 1 - 0]
+//     // array[1]   array[array.Length - 1 - 1]
+//     // array[2]   array[array.Length - 1 - 2]
+//     // array[3]   array[array.Length - 1 - 3]
+//     // 0 1 2 3 4 5
+//     // 5 9 6 3 7 4
+    
+// }
+
+// Console.Write("Insert the Length of an array: ");
+// int n = Convert.ToInt32(Console.ReadLine());   
+// int[] array = new int[n];                  
+// fillArray(array);                         
+// Console.WriteLine($"[{String.Join(", ", array)}]");  
+// EmNumbers(array);
